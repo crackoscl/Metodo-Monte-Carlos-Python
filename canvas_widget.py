@@ -17,7 +17,7 @@ class CanvasWidget(tk.Frame):
        
         puntos, self.puntos_dentro = calcular_puntos(current_value, self.x1, self.x2, self.y1, self.y2)
 
-        _ = [self.canvas.create_oval(x - 2, y - 2, x + 2, y + 2, fill=color, outline="") for x, y, color in puntos]
+        _ = [self.canvas.create_oval(x - 2, y - 2, x + 2, y + 2, fill=color, outline="",tags="punto") for x, y, color in puntos]
         
         # for x, y, color in puntos:
         #     self.canvas.create_oval(
